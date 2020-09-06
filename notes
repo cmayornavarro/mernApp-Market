@@ -1,0 +1,38 @@
+for starting the mongo db
+cd D:\nodeJSWorkSpace\mongodb-win32-x86_64-2012plus-4.2.8
+
+bin/mongo.exe
+> use cinema
+
+
+cd D:\ReactWorkSpace\mernApp-Market\client
+npm start
+
+cd D:\ReactWorkSpace\mernApp-Market\server
+npm run
+
+****for the client side
+
+$ npx create-react-app client
+
+
+React Fragments:
+
+
+Sometimes the wrapper div is irrelevant and it's used because components require to return only one element.
+
+***********Before***********
+<div>
+	<td>Hello</td>
+    <td>World</td>
+</div>
+***********After************
+<React.Fragment>
+        <td>Hello</td>
+        <td>World</td>
+</React.Fragment>
+
+jsx or js :
+It does not matter, jsx are converted to js. JSX is used for saying that a file contains only jsx code.
+
+why not babel?
