@@ -1,13 +1,13 @@
 const express = require('express')
 
-const MovieCtrl = require('../controllers/movie-ctrl')
+const ProductCtrl = require('../controllers/product-ctrl')
 
 const router = express.Router()
 
-router.post('/Product', MovieCtrl.createMovie)
-router.put('/Product/:id', MovieCtrl.updateMovie)
-router.delete('/Product/:id', MovieCtrl.deleteMovie)
-router.get('/Product/:id', MovieCtrl.getMovieById)
-router.get('/Products', MovieCtrl.getMovies)
+router.post('/Product', ProductCtrl.createProduct)
+router.put('/Product/:id', ProductCtrl.updateProduct)
+router.delete('/Product/:id', ProductCtrl.deleteProduct)
+router.get('/Product/:id', ProductCtrl.getProductById)
+router.get('/Products', ProductCtrl.getProducts)
 
 module.exports = router
