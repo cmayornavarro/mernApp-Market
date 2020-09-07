@@ -1,7 +1,7 @@
 import React from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
-import { NavBar } from '../components'
+import { Menu } from '../components'
 import { ProductsList, ProductsInsert, ProductsUpdate } from '../pages'
 
 import 'bootstrap/dist/css/bootstrap.min.css'
@@ -9,7 +9,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 function App() {
     return (
         <Router>
-            <NavBar />
+            <Menu />
             <Switch>
                 <Route path="/market/product" exact component={ProductsList} />
                 <Route path="/product/create" exact component={ProductsInsert} />
