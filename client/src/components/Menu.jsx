@@ -14,18 +14,18 @@ import Form from "react-bootstrap/Form";
 class Menu extends Component {
     render() {
         return (
-            <div>
-                <Navbar bg="light" expand="lg">
+              <React.Fragment>
+                <Navbar  bg="primary" variant="dark">
                     <Logo />
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="mr-auto">
                             <Links />
                         </Nav>
-                        <Form inline></Form>
+                       
                     </Navbar.Collapse>
                 </Navbar>
-            </div>
+              </React.Fragment>
         );
     }
 }

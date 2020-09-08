@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import api from '../api'
 
 import styled from 'styled-components'
+import Form from "react-bootstrap/Form";
 
 const Title = styled.h1.attrs({
     className: 'h1',
@@ -92,38 +93,36 @@ class ProductsInsert extends Component {
             <Wrapper>
                 <Title>Create Product</Title>
 
-                <Label>Name: </Label>
-                <InputText
-                    type="text"
-                    value={name}
-                    onChange={this.handleChangeInputName}
-                />
+<Form>
+  <Form.Group controlId="formBasicEmail">
+    <Form.Label>Name: </Form.Label>
+    <Form.Control type="text" placeholder="Enter product name"  value={name}  onChange={this.handleChangeInputName}/>
+    <Form.Text className="text-muted">
+      Product name must be unique
+    </Form.Text>
+  </Form.Group>
 
-                <Label>Country: </Label>
-                <InputText
-                    type="text"
-                    value={country}
-                    onChange={this.handleChangeInputCountry}
-                />
+  <Form.Group controlId="formBasicEmail">
+    <Form.Label>Country: </Form.Label>
+    <Form.Control type="text" placeholder="Entry a country"  value={country}  onChange={this.handleChangeInputCountry}/>
+  </Form.Group>
 
-                <Label>Rating: </Label>
-                <InputText
-                    type="number"
-                    step="0.1"
-                    lang="en-US"
-                    min="0"
-                    max="10"
-                    pattern="[0-9]+([,\.][0-9]+)?"
-                    value={rating}
-                    onChange={this.handleChangeInputRating}
-                />
+  <Form.Group controlId="formBasicEmail">
+    <Form.Label>Price: </Form.Label>
+    <Form.Control type="text"   placeholder="Enter a price"  value={rating}  onChange={this.handleChangeInputRating}/>
+    <Form.Text className="text-muted">
+      Enter only numbers
+    </Form.Text>
+  </Form.Group>
 
-                <Label>Time: </Label>
-                <InputText
-                    type="text"
-                    value={time}
-                    onChange={this.handleChangeInputTime}
-                />
+  <Form.Group controlId="formBasicEmail">
+    <Form.Label>Time: </Form.Label>
+    <Form.Control type="text"   placeholder="Enter a time"  value={rating}  onChange={this.handleChangeInputTime}/>
+    
+  </Form.Group>
+</Form>  
+               
+
 
                 <Button onClick={this.handleIncludeProduct}>Add Product</Button>
                 <CancelButton href={'/Products/list'}>Cancel</CancelButton>
