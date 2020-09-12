@@ -9,7 +9,7 @@ cd D:\ReactWorkSpace\mernApp-Market\client
 npm start
 
 cd D:\ReactWorkSpace\mernApp-Market\server
-npm run
+node index.js
 
 ****for the client side
 

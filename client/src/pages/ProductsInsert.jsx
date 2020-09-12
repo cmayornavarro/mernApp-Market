@@ -3,6 +3,7 @@ import api from '../api'
 
 import styled from 'styled-components'
 import Form from "react-bootstrap/Form";
+import Button from "react-bootstrap/Button";
 
 const Title = styled.h1.attrs({
     className: 'h1',
@@ -24,17 +25,7 @@ const InputText = styled.input.attrs({
     margin: 5px;
 `
 
-const Button = styled.button.attrs({
-    className: `btn btn-primary`,
-})`
-    margin: 15px 15px 15px 5px;
-`
 
-const CancelButton = styled.a.attrs({
-    className: `btn btn-danger`,
-})`
-    margin: 15px 15px 15px 5px;
-`
 
 class ProductsInsert extends Component {
     constructor(props) {
@@ -117,15 +108,16 @@ class ProductsInsert extends Component {
 
   <Form.Group controlId="formBasicEmail">
     <Form.Label>Time: </Form.Label>
-    <Form.Control type="text"   placeholder="Enter a time"  value={rating}  onChange={this.handleChangeInputTime}/>
-    
+    <Form.Control type="text"   placeholder="Enter a time"  value={time}  onChange={this.handleChangeInputTime}/>    
   </Form.Group>
 </Form>  
                
 
 
-                <Button onClick={this.handleIncludeProduct}>Add Product</Button>
-                <CancelButton href={'/Products/list'}>Cancel</CancelButton>
+
+                <Button variant="success" onClick={this.handleIncludeProduct}>Add Product</Button>
+                     <Button variant="danger" href={'/Products/list'}>Cancel</Button>
+           
             </Wrapper>
         )
     }
