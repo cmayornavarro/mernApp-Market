@@ -97,7 +97,7 @@ class ProductsInsert extends Component {
                         <Row className="justify-content-md-center">
                             <Col xs lg="3">
                                 <Form.Group controlId="formBasicEmail">
-                                    <Form.Label>Name: </Form.Label>
+                                    <Form.Label>Name of the product: </Form.Label>
                                     <Form.Control
                                         type="text"
                                         placeholder="Enter product name"
@@ -114,7 +114,7 @@ class ProductsInsert extends Component {
                                     <Form.Label>Country: </Form.Label>
                                     <Form.Control
                                         type="text"
-                                        placeholder="Entry a country"
+                                        placeholder="Entry a country of the product"
                                         value={country}
                                         onChange={this.handleChangeInputCountry}
                                     />
@@ -127,7 +127,7 @@ class ProductsInsert extends Component {
                                     <Form.Label>Price: </Form.Label>
                                     <Form.Control
                                         type="text"
-                                        placeholder="Enter a price"
+                                        placeholder="Enter a product's price"
                                         value={rating}
                                         onChange={this.handleChangeInputRating}
                                     />
